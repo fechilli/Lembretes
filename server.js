@@ -1,15 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+
+import express from 'express'
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.json());
-app.use(express.static('public'));
-
+// Rota inicial
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.send('Bem-vindo ao Express!');
 });
 
+// Iniciar o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

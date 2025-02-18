@@ -1,24 +1,29 @@
 {
   "name": "lembretes",
   "version": "1.0.0",
-  "description": "aplicacao para criar lembretes",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fechilli/Lembretes.git"
   },
-  "author": "Luiz Felipe",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fechilli/Lembretes/issues"
   },
   "homepage": "https://github.com/fechilli/Lembretes#readme",
-  "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
+  "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "fastify": "^5.2.1"
   }
 }
