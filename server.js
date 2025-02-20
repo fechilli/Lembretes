@@ -1,53 +1,35 @@
-import { DatabaseMemory } from './memory_database.js';
-import express from 'express'
+//import express from 'express'
+
+const express = require('express')
+//const router = require('./routes/index')
+const conexao = require('./databases/bd.tarefas')
 const app = express();
 const port = 3000;
 
-const database = new DatabaseMemory();
 
-//const now = new Date();
+//router(app)
+app.use(express.json()); // Permite o envio de JSON no corpo da requisição
 
-app.use(express.json())
+app.post('/tarefas', (req, res) => {
+  const { data, descricao } = req.body;
 
+  // Query para inserir uma nova tarefa
+  const sql = `INSERT INTO tarefas (data, descricao) VALUES ('2025-02-20 09:30:00', 'teste1')`;
 
-// Rota inicial
-app.get('/home', (req, res) => {
-  const tarefas = database.list()
-
-  console.log(tarefas)
-  
-  res.send(tarefas);
+  conexao.query(sql, [data, descricao], (err, results) => {
+    if (err) {
+      console.error('Erro ao inserir tarefa:', err);
+      res.status(500).send('Erro ao adicionar tarefa');
+    } else {
+      res.status(201).send('Tarefa adicionada com sucesso');
+    }
+  });
 });
-
-
-
-
-
-app.post('/home', (req, res) => {
-
-  const {titulo, descricao, data} = req.body;
-
-  
-  database.create({
-    titulo: titulo,
-    descrição: descricao,
-    data : data
-  })
-
-
-  
-  return res.status(201).send()
-
-})
-
-
-
-app.put('/:id', (req, res) => {})
-
-app.delete('/delete', (req, res) =>{})
-
-
 // Iniciar o servidor
-app.listen(port, () => {
+app.listen(port, (error) => {
+  if(error){
+    console.log("deu erro")
+  }
   console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Deu certo!`);
 });
