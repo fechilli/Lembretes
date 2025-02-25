@@ -1,4 +1,4 @@
-const routerTarefas = require('./tarefas')
+const routerTarefas = require('./tarefasRoute')
 
 module.exports=(app)=>{
     app.use(routerTarefas)

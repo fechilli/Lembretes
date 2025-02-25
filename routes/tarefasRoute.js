@@ -1,25 +1,30 @@
 const express = require('express')
 const router = express.Router();
+const tarefasController = require('../controllers/tarefasController')
 
 // get post put delete para criar o crud
 
 router.get('/tarefa', (req, res) =>{
-    res.send("Testando a primeira rota")
+    const resposta = tarefasController.buscar()
+    res.send(resposta)
 })
 
 
 router.post('/tarefa1', (req, res) =>{
-    res.send("Testando a primeira rota post")
+    const resposta = tarefasController.criar()
+    res.send(resposta)
 })
 
 router.put('/tarefa/:id', (req, res) =>{
     const {id} = req.params.id
-    res.send(`Testando a primeira rota put ${id}`)
+    const resposta = tarefasController.alterar(id)
+    res.send(resposta)
 })
 
 router.delete('/tarefa/id', (req, res) =>{
     const {id} = req.params.id
-    res.send(`Testando a primeira rota delete ${id}`)
+    const resposta = tarefasController.excluir(id)
+    res.send(resposta)
 })
 
 module.exports = router
