@@ -5,8 +5,11 @@ const tarefasController = require('../controllers/tarefasController')
 // get post put delete para criar o crud
 
 router.get('/tarefa', (req, res) =>{
-    const resposta = tarefasController.buscar()
-    res.send(resposta)
+    const listaTarefas = tarefasController.buscar()
+
+    listaTarefas
+    .then((tarefas) => res.status(200).json(tarefas))
+    .catch((error) => res.status(400).json(error.mensage))
 })
 
 
