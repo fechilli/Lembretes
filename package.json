@@ -1,11 +1,11 @@
 {
   "name": "lembretes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema de lembretes com opção de alerta",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,15 @@
   },
   "homepage": "https://github.com/fechilli/Lembretes#readme",
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.3"
   },
   "dependencies": {
     "express": "^4.21.2",
     "fastify": "^5.2.1",
     "mysql": "^2.18.1",
-    "mysql2": "^3.12.0"
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5",
+    "tedious": "^18.6.1"
   }
 }
