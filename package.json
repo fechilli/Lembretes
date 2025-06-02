@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/fechilli/Lembretes#readme",
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.3"
   },
   "dependencies": {
     "express": "^4.21.2",

@@ -13,8 +13,9 @@ const sequelize = new Sequelize('tarefas', 'root', '', {
   try {
     await sequelize.authenticate();
     console.log('Conexão com o banco de dados estabelecida com sucesso.');
+    console.log('📦 👍 Banco de dados sincronizado');
   } catch (error) {
-    console.error('Erro ao conectar ao banco de dados:', error);
+    console.error('❌ Erro ao conectar ao banco de dados:', error);
   }
 })();
 

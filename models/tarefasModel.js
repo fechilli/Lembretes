@@ -12,6 +12,10 @@ const Tarefa = sequelize.define(
       type: DataTypes.DATE,
       allowNull: false
     },
+    data_limite:{
+      type: DataTypes.DATE,
+      allowNull: false
+    },
     descricao:{
       type: DataTypes.STRING,
       allowNull: false
