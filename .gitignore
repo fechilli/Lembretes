@@ -1,0 +1,21 @@
+# node_modules: dependências instaladas
+node_modules/
+
+# .env: variáveis de ambiente (NUNCA versionar)
+.env
+
+# logs
+logs/
+*.log
+
+# arquivos do Sequelize CLI
+*.sqlite
+*.sqlite3
+
+# arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# pastas de build (se houver)
+dist/
+build/
