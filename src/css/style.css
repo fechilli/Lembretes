@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:rgb(51, 49, 49);
+    align-items: center;
+    flex-wrap: wrap;
+      
+
+}
+.logo-header img{
+    height: 45px;
+    width: auto;
+    max-width: 120px;
+    display: flex;
+    align-items: center;
+    fill: rgb(51, 49, 49);;
+}
+
+.perfil button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #F0F0F0;
+    font-size: 16px;
+    
+}
+.perfil a{
+    text-decoration: none;
+    color: #F0F0F0;
+    font-size: 16px;
+}
+
+@media (max-width: 450px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        
+    }
+    .logo-header img {
+        max-width: 100px;
+    }
+    .perfil button, .perfil a {
+        font-size: 14px;
+    }
+}
