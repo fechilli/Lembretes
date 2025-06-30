@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
 }
+
 header{
     display: flex;
     justify-content: space-between;
@@ -21,6 +24,11 @@ header{
     align-items: center;
     fill: rgb(51, 49, 49);;
 }
+.perfil{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
 .perfil button{
     background-color: transparent;
@@ -34,6 +42,52 @@ header{
     text-decoration: none;
     color: #F0F0F0;
     font-size: 16px;
+}
+
+.contadores{
+    height: 100px;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 50px;
+}
+.card{
+    height: 80px;
+    width:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+
+
+}
+
+.pendente{
+border: 1px solid rgb(47, 163, 66);
+}
+
+.vencido{
+border: 1px solid rgb(209, 68, 68);
+
+}
+
+.total{
+border: 1px solid rgb(88, 49, 226);
+}
+
+.tarefas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color:rgb(214, 69, 69);
+    padding: 60px;
 }
 
 @media (max-width: 450px) {
