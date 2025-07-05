@@ -6,19 +6,29 @@
     background-color: #121212;
 }
 body {
-    font-family: 'Roboto', arial, sans-serif;
-    
+    font-family: 'Roboto', arial, sans-serif;   
   
 }
 
+<<<<<<< HEAD
 .caixas-videos-1{
     display: flex;
     flex-wrap:  ;
 }
 
+=======
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+>>>>>>> b31478c8b8a16d5425e6ee49680ec8a48714d99b
 .caixa-video{
     display: flex;
     gap: 10px;
+    
+    gap: 8px;
     
 }
 .caixa-texto {
@@ -64,4 +74,10 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b31478c8b8a16d5425e6ee49680ec8a48714d99b
